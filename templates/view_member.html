@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Member Details{% endblock %}
+
+{% block content %}
+
+<div class="card shadow">
+
+    <div class="card-header bg-primary text-white">
+        <h3>Member Details</h3>
+    </div>
+
+    <div class="card-body">
+
+        <table class="table">
+
+            <tr>
+                <th width="220">Full Name</th>
+                <td>{{ member.full_name }}</td>
+            </tr>
+
+            <tr>
+                <th>National ID</th>
+                <td>{{ member.id_number }}</td>
+            </tr>
+
+            <tr>
+                <th>Next of Kin</th>
+                <td>{{ member.next_of_kin }}</td>
+            </tr>
+
+            <tr>
+                <th>Registration Date</th>
+                <td>{{ member.registration_date.strftime("%d %b %Y") }}</td>
+            </tr>
+
+            <tr>
+                <th>Uploaded ID</th>
+                <td>
+                    <a href="{{ url_for('static', filename='uploads/' + member.id_upload) }}"
+                       target="_blank"
+                       class="btn btn-info btn-sm">
+                        View Uploaded ID
+                    </a>
+                </td>
+            </tr>
+
+        </table>
+
+        <a href="{{ url_for('members') }}"
+           class="btn btn-secondary">
+            ← Back to Members
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

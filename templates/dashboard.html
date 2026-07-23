@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="row mb-4">
+
+    <div class="col-md-12">
+        <h2 class="fw-bold">Dashboard</h2>
+        <p class="text-muted">
+            Welcome! Use the quick actions below to manage member records.
+        </p>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <div class="card shadow border-0">
+
+            <div class="card-body text-center">
+
+                <h5 class="text-muted">Total Members</h5>
+
+                <h1 class="display-3 fw-bold text-primary">
+                    {{ total_members }}
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="mt-5">
+
+    <h4 class="mb-3">Quick Actions</h4>
+
+    <a href="/register" class="btn btn-primary me-2">
+        + Register Member
+    </a>
+
+    <a href="/members" class="btn btn-success">
+        View Members
+    </a>
+
+</div>
+
+<div class="mt-5">
+
+    <h4 class="mb-4">What can you do?</h4>
+
+    <div class="row">
+
+        <div class="col-md-4">
+
+            <div class="card shadow-sm h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>👤</h3>
+
+                    <h5>Register Members</h5>
+
+                    <p class="text-muted">
+                        Add new members and upload their identification documents.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow-sm h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>📋</h3>
+
+                    <h5>Manage Records</h5>
+
+                    <p class="text-muted">
+                        Edit or remove member information whenever necessary.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+
+            <div class="card shadow-sm h-100">
+
+                <div class="card-body text-center">
+
+                    <h3>🔍</h3>
+
+                    <h5>Find Members</h5>
+
+                    <p class="text-muted">
+                        Search for members quickly using their name or ID number.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
